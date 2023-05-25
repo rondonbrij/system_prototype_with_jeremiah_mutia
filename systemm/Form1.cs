@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace systemm
 {
     public partial class Form1 : Form
@@ -39,14 +44,29 @@ namespace systemm
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void delete_selected_btn_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                string selectedRecord = listBox1.SelectedItem.ToString();
+                listBox1.Items.Remove(selectedRecord);
+
+                // Delete the selected record from the file
+                string[] lines = File.ReadAllLines(AttendanceFilePath);
+                File.WriteAllLines(AttendanceFilePath, lines.Where(line => line != selectedRecord));
+            }
+        }
+
+
+        private void clear_btn_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
         }
     }
 }

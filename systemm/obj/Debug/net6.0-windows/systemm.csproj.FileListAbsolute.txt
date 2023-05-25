@@ -32,3 +32,4 @@ C:\Users\DARL\Desktop\systemm\systemm\obj\Debug\net6.0-windows\refint\systemm.dl
 C:\Users\DARL\Desktop\systemm\systemm\obj\Debug\net6.0-windows\systemm.pdb
 C:\Users\DARL\Desktop\systemm\systemm\obj\Debug\net6.0-windows\systemm.genruntimeconfig.cache
 C:\Users\DARL\Desktop\systemm\systemm\obj\Debug\net6.0-windows\ref\systemm.dll
+C:\Users\DARL\Desktop\systemm\systemm\obj\Debug\net6.0-windows\systemm.Properties.Resources.resources

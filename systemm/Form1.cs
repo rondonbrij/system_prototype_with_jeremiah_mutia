@@ -27,28 +27,26 @@ namespace systemm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text.Trim();
+            string firstName = name_txtbox.Text.Trim();
+            string lastName = lastname_txtbox.Text.Trim();
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
-                MessageBox.Show("Please enter your name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter your full name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string attendanceRecord = $"{DateTime.Now}: {name}";
+            string attendanceRecord = $"{DateTime.Now}: {lastName}, {firstName}";
             listBox1.Items.Add(attendanceRecord);
             File.AppendAllText(AttendanceFilePath, attendanceRecord + Environment.NewLine);
 
-
-            textBox1.Clear();
-
+            name_txtbox.Clear();
+            lastname_txtbox.Clear();
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void delete_selected_btn_Click(object sender, EventArgs e)
         {
@@ -71,6 +69,16 @@ namespace systemm
         private void clear_btn_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+        }
+
+        private void lastname_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

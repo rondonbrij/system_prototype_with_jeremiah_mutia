@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.name_txtbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.clear_btn = new System.Windows.Forms.Button();
             this.delete_selected_btn = new System.Windows.Forms.Button();
+            this.lastname_txtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Courier New", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(282, 9);
+            this.label1.Location = new System.Drawing.Point(161, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 22);
+            this.label1.Size = new System.Drawing.Size(605, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Attendace Management System";
+            this.label1.Text = "Attendance Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // name_txtbox
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox1.Location = new System.Drawing.Point(50, 76);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 23);
-            this.textBox1.TabIndex = 1;
+            this.name_txtbox.Cursor = System.Windows.Forms.Cursors.No;
+            this.name_txtbox.Location = new System.Drawing.Point(50, 76);
+            this.name_txtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_txtbox.Name = "name_txtbox";
+            this.name_txtbox.Size = new System.Drawing.Size(220, 23);
+            this.name_txtbox.TabIndex = 1;
             // 
             // button1
             // 
@@ -102,6 +103,16 @@
             this.delete_selected_btn.UseVisualStyleBackColor = true;
             this.delete_selected_btn.Click += new System.EventHandler(this.delete_selected_btn_Click);
             // 
+            // lastname_txtbox
+            // 
+            this.lastname_txtbox.Cursor = System.Windows.Forms.Cursors.No;
+            this.lastname_txtbox.Location = new System.Drawing.Point(50, 112);
+            this.lastname_txtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lastname_txtbox.Name = "lastname_txtbox";
+            this.lastname_txtbox.Size = new System.Drawing.Size(220, 23);
+            this.lastname_txtbox.TabIndex = 6;
+            this.lastname_txtbox.TextChanged += new System.EventHandler(this.lastname_txtbox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -109,11 +120,12 @@
             this.BackgroundImage = global::systemm.Properties.Resources.bright_hex_backgrounds_networking;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(895, 490);
+            this.Controls.Add(this.lastname_txtbox);
             this.Controls.Add(this.delete_selected_btn);
             this.Controls.Add(this.clear_btn);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.name_txtbox);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -127,10 +139,11 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox name_txtbox;
         private Button button1;
         private ListBox listBox1;
         private Button clear_btn;
         private Button delete_selected_btn;
+        private TextBox lastname_txtbox;
     }
 }

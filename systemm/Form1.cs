@@ -52,16 +52,20 @@ namespace systemm
 
         private void delete_selected_btn_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
+            if (listBox1.SelectedItem == null)
             {
-                string selectedRecord = listBox1.SelectedItem.ToString();
-                listBox1.Items.Remove(selectedRecord);
-
-                // Delete the selected record from the file
-                string[] lines = File.ReadAllLines(AttendanceFilePath);
-                File.WriteAllLines(AttendanceFilePath, lines.Where(line => line != selectedRecord));
+                MessageBox.Show("Error, nothing selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            string selectedRecord = listBox1.SelectedItem.ToString();
+            listBox1.Items.Remove(selectedRecord);
+
+            // Delete the selected record from the file
+            string[] lines = File.ReadAllLines(AttendanceFilePath);
+            File.WriteAllLines(AttendanceFilePath, lines.Where(line => line != selectedRecord));
         }
+
 
 
         private void clear_btn_Click(object sender, EventArgs e)
